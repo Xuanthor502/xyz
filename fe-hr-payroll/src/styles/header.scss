@@ -1,0 +1,153 @@
+// Colors and other variables for easy customization
+$background-color: white;
+$border-color: #e7e7e7;
+$text-color: #333;
+$primary-color: #0056b3;
+$hover-color: #449d44;
+$avatar-size: 30px;
+$dropdown-width: 200px;
+$divider-color: #ccc;
+$search-btn-bg: #777;
+$search-btn-hover-bg: $hover-color;
+
+.header {
+  height: 60px;
+  padding: 0px;
+  margin: 0px;
+  background-color: $background-color;
+  border-bottom: 1px solid $border-color;
+  width: 100%;
+}
+.site-layout-background
+{
+  padding-left: 10px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand{
+  padding-left: 30px;
+}
+.nav-icons {
+  display: flex;
+  list-style: none;
+  // padding-left: 20px;
+  
+  li {
+    padding: 0 10px;
+  }
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.navbar-search {
+  position: relative;
+  padding-left: 30px;
+  .search-btn {
+    border: none;
+    background-color: $search-btn-bg;
+    color: #fff;
+    padding: 5px 10px;
+    margin-left: 25px;
+    width: 45px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $search-btn-hover-bg;
+    }
+  }
+
+  input {
+    border: 1px solid $border-color;
+    padding: 5px;
+    width: 240px;
+  }
+}
+
+
+.nav-collapse {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  font-size: 20px;
+  color: $text-color;
+  text-decoration: none;
+}
+
+.nav-user {
+  position: relative;
+
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+}
+
+
+.custom-menu
+{
+  background-color: #e9e5e5;
+}
+.custom-menu .ant-menu-item {
+  height: 50px;
+  background-color: #333;
+  padding: 0px;
+  margin: 0px;
+}
+.custom-menu .ant-menu-submenu{
+  background-color: #333;
+  border-bottom: 1px solid rgb(173, 168, 168);
+  border-radius: 0px;
+  width: 262px;
+  padding: 0px;
+  margin: 0px; 
+}
+.custom-menu .ant-menu-item { 
+  border-radius: 0px;
+}
+.custom-menu .ant-menu-submenu:not(:last-child) {
+  border-bottom: 1px solid rgb(173, 168, 168); /* Tạo đường phân cách màu trắng */
+}
+.custom-menu .ant-menu-submenu:first-child {
+  border-top-left-radius: 5px; /* Làm tròn góc trên bên trái */
+  border-top-right-radius: 5px; /* Làm tròn góc trên bên phải */
+}
+.custom-menu .ant-menu-item:not(:last-child) {
+  border-bottom: 1px solid rgb(173, 168, 168); /* Tạo đường phân cách màu trắng */
+}
+.custom-menu .ant-menu-item:first-child {
+  border-top-left-radius: 5px; /* Làm tròn góc trên bên trái */
+  border-top-right-radius: 5px; /* Làm tròn góc trên bên phải */
+}
+
+.custom-menu .ant-menu-item:last-child {
+  border-bottom-left-radius: 5px; /* Làm tròn góc dưới bên trái */
+  border-bottom-right-radius: 5px; /* Làm tròn góc dưới bên phải */
+}
+.custom-menu .ant-menu-item:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+.custom-menu .ant-menu-item:hover a {
+  color: white !important;
+}
+
+/* Ghi đè trạng thái được chọn */
+.custom-menu .ant-menu-item-selected,
+.custom-menu .ant-menu-item-selected a {
+  // background-color: #3a3a3b !important; /* Màu nền ban đầu của Sidebar */
+  color: gray !important; /* Màu chữ ban đầu */
+}

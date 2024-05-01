@@ -1,0 +1,139 @@
+$progress-background-color: #f0f0f0;
+$bar-fe-color: #16b1f4;
+$bar-success-color: #28a745;
+$bar-warning-color: #ffc107;
+$bar-danger-color: #dc3545;
+$text-color: white;
+
+.listContainer {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 10px;
+
+  .itemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 250px); // 250px là giả định chiều rộng của listLine, điều chỉnh tùy ý
+    gap: 10px;
+    margin-right: 10px;
+  
+    .flex-row {
+      height: 110px;
+      
+      font-weight: 500;
+      margin-bottom: 15px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px; // Khoảng cách giữa các .flex-item
+    }
+
+    .flex-item {
+      border-radius: 6px;
+      background-color:  white;
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(71, 46, 46, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 20px;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      width: calc(33.333% - 20px);
+     
+      .icon {
+        font-size: 24px;
+        width: 26px;
+        height: 16px;
+        color: #16b1f4;
+      }
+
+      p {
+        font-size: 13.2px;
+        color: gray
+      }
+    }
+  }
+
+  .listLine {
+    border-radius: 6px;
+    background-color:  white;
+    width: 290px;
+    margin-left: 20px; 
+
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(71, 46, 46, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+    ul {
+      margin: 0px;
+      list-style-type: none;
+      padding: 0px;
+
+      li { 
+        padding: 0 20px 30px 20px;
+        &:not(:last-child) {
+          border-bottom: 1px solid #ccc; // Sử dụng màu sắc của bạn
+          margin-bottom: 10px; // Khoảng cách giữa các li, điều chỉnh theo ý muốn
+          padding-bottom: 10px; // Padding dưới để tạo khoảng không trước đường kẻ
+          
+        }
+
+        p {
+          display: flex;
+          justify-content: space-between;
+          span
+          {
+            color: gray
+          }
+        }
+
+        .progress {
+          
+          background-color: $progress-background-color;
+          border-radius: 4px;
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+          height: 9px;
+
+          .bar {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: $text-color;
+            padding-left: 8px;
+
+            // Percentage text inside the bar
+            .percentage {
+              position: absolute;
+              z-index: 1;
+            }
+
+            // Variations for different statuses
+            &.bar-fe {
+              background-color: $bar-fe-color;
+            }
+
+            &.bar-success {
+              background-color: $bar-success-color;
+            }
+
+            &.bar-warning {
+              background-color: $bar-warning-color;
+            }
+
+            &.bar-danger {
+              background-color: $bar-danger-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
